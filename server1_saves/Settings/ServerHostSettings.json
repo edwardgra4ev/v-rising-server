@@ -1,0 +1,26 @@
+{
+  "Name": "Pesil server",
+  "Description": "Hello pesil",
+  "Port": "9876",
+  "QueryPort": "9877",
+  "MaxConnectedUsers": "4",
+  "MaxConnectedAdmins": "4",
+  "ServerFps": "30",
+  "SaveName": "world1",
+  "Password": "password",
+  "Secure": "true",
+  "ListOnMasterServer": "true",
+  "AutoSaveCount": "50",
+  "AutoSaveInterval": "300",
+  "GameSettingsPreset": "",
+  "AdminOnlyDebugEvents": true,
+  "DisableDebugEvents": false,
+  "Rcon": {
+    "Enabled": "false",
+    "Port": "25575",
+    "Password": "rconpassword",
+    "BindAddress": ""
+  },
+  "Address": "",
+  "LanMode": "false"
+}

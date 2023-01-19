@@ -1,0 +1,30 @@
+ 
+version: "3"
+services: 
+  vrising:
+    container_name: vrising-server
+    image: solareon/vrising-svr:latest
+    volumes: 
+      - ~/steamcmd/VRising:/mnt/vrising/server # Полный путь до директории с игрой
+      - ~/VRising/server1_saves:/mnt/vrising/persistentdata # Полный путь до директории с сохранением
+    environment:
+      - "TZ=Europe/Moscow"
+      - "SERVER_NAME=Pesil server"
+      - "SERVER_DESCRIPTION=Hello pesil"
+      - GAME_PORT=9876
+      - QUERY_PORT=9877
+      - MAX_USERS=4
+      - MAX_ADMIN=4
+      - SERVER_FPS=30
+      - "SAVE_NAME=world1"
+      - STEAM_LIST=true
+      - AUTOSAVE_NUM=50
+      - AUTOSAVE_INT=300
+      - RCON_ENABLE=false
+      - RCON_PORT=25575
+      - "RCON_PASSWORD=rconpassword"
+    ports: 
+      - "9876:9876/udp"
+      - "9877:9877/udp"
+      - "25575:25575/tcp"
+    restart: unless-stopped
